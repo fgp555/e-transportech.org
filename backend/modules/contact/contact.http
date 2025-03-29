@@ -1,0 +1,13 @@
+GET http://localhost:3000/api/contact
+
+### Enviar formulario (cambiar los valores según sea necesario)
+POST http://localhost:3000/api/contact/submit
+Content-Type: application/json
+
+{
+  "name": "Frank GP",
+  "email": "fgp555@gmail.com",
+  "subject": "Solicitar información",
+  "message": "Me gustaría obtener más información.",
+  "currentUrl": "http://example.com/contact"
+}

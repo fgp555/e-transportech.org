@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+}
+
+nav a {
+  /* color: white; */
+  text-decoration: none;
+}
+
+nav a.active {
+  color: brown;
+  text-decoration: underline;
+}
+
+aside.right {
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+}
