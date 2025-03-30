@@ -1,0 +1,15 @@
+.text-primary {
+  font-size: 3rem;
+  text-align: center;
+}
+.text-month {
+  text-align: center;
+  color: #888;
+}
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.text-muted {
+  color: #888;
+}

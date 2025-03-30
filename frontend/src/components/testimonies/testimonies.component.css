@@ -1,0 +1,40 @@
+.testimonial-section {
+  background: url("https://i.postimg.cc/Kv206Nps/section-4.webp") no-repeat
+    center center;
+  /* background: url("https://i.postimg.cc/3xqzpG9j/bg-image-10.webp") no-repeat
+    center center; */
+  background-size: cover;
+  background-attachment: fixed; /* Efecto parallax */
+  padding: 5rem 0;
+  color: white; /* Asegura que el texto sea legible */
+}
+.title_testimonies {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+.testimonial-section h2 {
+  color: white; /* Color del título */
+}
+
+.testimonial-img {
+  width: 100px;
+  max-width: 120px;
+  height: 100px;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff; /* Resalta la imagen */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondos para los botones */
+  border-radius: 50%;
+}
+
+.lead {
+  max-width: 50ch;
+  margin: 2em auto;
+}

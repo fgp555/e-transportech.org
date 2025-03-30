@@ -22,6 +22,9 @@ apiRouter.use("/contact", require("./modules/contact/contact.module"));
 
 mainApp.use("/api", apiRouter);
 
+// public
+mainApp.use(express.static(path.join(__dirname, "public")));
+
 const dir_SPA = "frontend/browser";
 // const dir_SPA = "reactjs";
 mainApp.use(express.static(path.join(__dirname, dir_SPA)));

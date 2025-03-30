@@ -1,21 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroComponent } from '../../components/hero/hero.component';
-import { RequestComponent } from '../../components/request/request.component';
 import { ServicesComponent } from '../../components/services/services.component';
-import { AboutComponent } from '../../components/about/about.component';
 import { BlogsComponent } from '../../components/blogs/blogs.component';
 import { MapComponent } from '../../components/map/map.component';
+import { VideoComponent } from '../../components/video/video.component';
+import { TestimoniesComponent } from '../../components/testimonies/testimonies.component';
 
 @Component({
   imports: [
-    HeroComponent,
-    RequestComponent,
     ServicesComponent,
-    AboutComponent,
+    VideoComponent,
     BlogsComponent,
     MapComponent,
+    TestimoniesComponent,
     //
   ],
-  templateUrl: 'home.component.html',
+  templateUrl: 'home.page.html',
 })
-export class HomeComponent {}
+export class HomePage {}

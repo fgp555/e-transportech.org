@@ -4,25 +4,50 @@ header {
   align-items: center;
   background-color: #fff;
 }
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
 
 nav {
   display: flex;
   gap: 1rem;
   padding: 10px;
+  text-transform: uppercase;
 }
 
 nav a {
   /* color: white; */
   text-decoration: none;
+  /* font-weight: bold; */
+  font-size: 1rem;
+  font-weight: 00;
 }
 
 nav a.active {
-  color: brown;
-  text-decoration: underline;
+  /* color: brown; */
+  color: cornflowerblue;
+  /* text-decoration: underline; */
 }
 
 aside.right {
   display: flex;
   gap: 1rem;
   padding: 10px;
+}
+.social-media {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  color: #000;
+  border-radius: 0;
+  border: 2px solid #888;
+}
+
+.btn-primary {
+  background-color: white;
 }

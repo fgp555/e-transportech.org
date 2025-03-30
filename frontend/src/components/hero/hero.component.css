@@ -4,13 +4,20 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 70vh;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   color: white;
-  padding: 20px;
+  padding: 20vw;
+}
+hr {
+  max-width: 5rem;
+  border-width: 3px;
+  border-color: cornflowerblue;
+  z-index: 1;
+  opacity: 1;
 }
 
 /* Fondo oscuro transparente para mejorar legibilidad */
@@ -52,9 +59,10 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
-  background-color: #ff7b00;
+  /* background-color: #ff7b00; */
+  background-color: cornflowerblue;
   border: none;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   transition: background 0.3s ease-in-out;
   cursor: pointer;
 }
