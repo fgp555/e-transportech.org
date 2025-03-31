@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { ServicesComponent } from '../../components/services/services.component';
+import { MapComponent } from '../../components/map/map.component';
 
 @Component({
-  imports: [ServicesComponent],
+  imports: [MapComponent],
   templateUrl: 'services.page.html',
+  styleUrls: ['services.page.css'],
 })
 export class ServicesPage {}

@@ -1,0 +1,149 @@
+.mini_hero {
+  background-image: url("https://i.postimg.cc/gJ26XDy4/about-bg-image-1.webp");
+  background-size: 100%;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title_hero {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* ========== Tabs ========== */
+.services_container {
+  margin-top: 6rem !important;
+  /* background-color: peru; */
+}
+.title_service {
+  font-size: 1.5rem;
+  color: black;
+  margin: 2rem 0;
+}
+.text_description {
+  max-width: 55ch;
+}
+
+.nav-pills .nav-link,
+.nav-item {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+
+  border-radius: 0 !important;
+  /* background-color: peru; */
+}
+
+.nav-pills .nav-link {
+  background-color: rgb(233, 233, 233);
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #e63946; /* Rojo vibrante */
+  color: white;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .tabs-container {
+    flex-direction: column;
+  }
+}
+
+.nav-link {
+  text-transform: uppercase !important;
+}
+
+/* ========== our_advantages ========== */
+/* Sección principal */
+.our_advantages {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Título con líneas a los lados */
+.our_advantages div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hr_title_aside {
+  width: 80px;
+  height: 3px;
+  background-color: #e63946; /* Rojo vibrante */
+  border: none;
+}
+
+/* Contenedor de cuadrícula 2x2 */
+.grid_2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Tarjeta de ventaja */
+.grid_2x2 article {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover */
+.grid_2x2 article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Iconos */
+.grid_2x2 article i {
+  font-size: 2.5rem;
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+/* Título de cada ventaja */
+.grid_2x2 article h3 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+/* Línea divisoria */
+.hr_line {
+  width: 50px;
+  height: 3px;
+  background-color: #e63946;
+  border: none;
+  margin: 0.5rem auto;
+}
+
+/* Descripción */
+.grid_2x2 article p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .grid_2x2 {
+    grid-template-columns: 1fr;
+  }
+}

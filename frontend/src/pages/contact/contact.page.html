@@ -1,1 +1,112 @@
-<request-component></request-component>
+<section class="mini_hero">
+  <h2 class="title_hero">Contactos</h2>
+</section>
+
+<section class="contact_container">
+  <aside class="contact_container_left">
+    <h2>Contáctanos</h2>
+    <form #contactForm="ngForm" (ngSubmit)="enviarFormulario(contactForm)">
+      <div class="head">
+        <div class="field_container">
+          <input
+            type="text"
+            placeholder="Nombre"
+            [(ngModel)]="nombre"
+            name="nombre"
+            #nombreRef="ngModel"
+            required
+            minlength="3"
+          />
+          <div *ngIf="nombreRef.invalid && nombreRef.touched" class="error">
+            <small *ngIf="nombreRef.errors?.['required']"
+              >El nombre es obligatorio.</small
+            >
+            <small *ngIf="nombreRef.errors?.['minlength']"
+              >Debe tener al menos 3 caracteres.</small
+            >
+          </div>
+        </div>
+        <div class="field_container">
+          <input
+            type="email"
+            placeholder="Correo"
+            [(ngModel)]="correo"
+            name="correo"
+            #correoRef="ngModel"
+            required
+            email
+          />
+          <div *ngIf="correoRef.invalid && correoRef.touched" class="error">
+            <small *ngIf="correoRef.errors?.['required']"
+              >El correo es obligatorio.</small
+            >
+            <small *ngIf="correoRef.errors?.['email']"
+              >Ingrese un correo válido.</small
+            >
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="body">
+        <div class="field_container">
+          <textarea
+            placeholder="Mensaje"
+            [(ngModel)]="mensaje"
+            name="mensaje"
+            #mensajeRef="ngModel"
+            required
+            minlength="10"
+          ></textarea>
+
+          <div *ngIf="mensajeRef.invalid && mensajeRef.touched" class="error">
+            <small *ngIf="mensajeRef.errors?.['required']"
+              >El mensaje es obligatorio.</small
+            >
+            <small *ngIf="mensajeRef.errors?.['minlength']"
+              >Debe tener al menos 10 caracteres.</small
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+      </div>
+    </form>
+  </aside>
+
+  <aside class="contact_container_right">
+    <h2>Información de contacto</h2>
+    <table>
+      <tr>
+        <td>Telefono:</td>
+        <td>123-456-7890</td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td>2x1VW(a)example.com</td>
+      </tr>
+      <tr>
+        <td>Dirección:</td>
+        <td>123 Main Street, City, Country</td>
+      </tr>
+      <tr>
+        <td>Horario:</td>
+        <td>Mon-Fri: 9am-5pm</td>
+      </tr>
+      <tr>
+        <td>Redes sociales:</td>
+        <td class="social_media">
+          <i class="fa-brands fa-facebook fa-lg"></i>
+          <i class="fa-brands fa-twitter fa-lg"></i>
+          <i class="fa-brands fa-instagram fa-lg"></i>
+          <i class="fa-brands fa-linkedin fa-lg"></i>
+        </td>
+      </tr>
+    </table>
+  </aside>
+</section>
+
+<map-component></map-component>

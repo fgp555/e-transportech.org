@@ -6,8 +6,8 @@ import { HomePage } from '../pages/home/home.page';
 
 export const routes: Routes = [
   { path: '', component: HomePage },
-  { path: 'contact', component: ContactPage },
-  { path: 'about', component: AboutPage },
-  { path: 'services', component: ServicesPage },
+  { path: 'contacto', component: ContactPage },
+  { path: 'nosotros', component: AboutPage },
+  { path: 'servicios', component: ServicesPage },
   { path: '**', redirectTo: '' },
 ];

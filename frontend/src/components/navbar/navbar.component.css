@@ -21,7 +21,7 @@ nav {
 nav a {
   /* color: white; */
   text-decoration: none;
-  /* font-weight: bold; */
+  font-weight: 500;
   font-size: 1rem;
   font-weight: 00;
 }
@@ -41,7 +41,9 @@ aside.right {
   display: flex;
   gap: 1rem;
 }
-
+.social-media i {
+  color: #444;
+}
 .btn {
   color: #000;
   border-radius: 0;
@@ -51,3 +53,27 @@ aside.right {
 .btn-primary {
   background-color: white;
 }
+
+.fa-envelope {
+  color: #444;
+}
+
+/* === Mobile... === */
+@media (max-width: 40rem) {
+  .header_container {
+    display: flex;
+    /* background-color: peru; */
+    position: relative;
+  }
+  .img_logo {
+    max-width: 45vw;
+    position: absolute;
+    top: calc(1.7rem);
+    left: calc(50% - 10vw);
+    z-index: 1;
+  }
+  .row > * {
+    width: initial;
+  }
+}
+/* === Mobile... === */

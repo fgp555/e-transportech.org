@@ -15,3 +15,34 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
+
+/* === Mobile... === */
+@media (max-width: 40rem) {
+  .mobile-none {
+    display: none !important;
+    /* background-color: peru; */
+  }
+}
+/* === Mobile. === */
+
+/* === Tablet... === */
+@media (max-width: 100rem) {
+  .tablet-none {
+    display: none !important;
+    background-color: peru;
+  }
+}
+/* === Tablet. === */
+
+.button {
+  background-color: cornflowerblue;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  /* border-radius: 0.25rem; */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}

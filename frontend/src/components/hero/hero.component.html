@@ -1,13 +1,100 @@
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <hr />
-    <h1>
-      Servicio de Trasporte
-      <br />
-      de Carga Pesada
-    </h1>
-    <!-- <p>Delivering excellence with speed, efficiency, and reliability.</p> -->
-    <button class="btn-primary" id="btn-primary">Get Started</button>
+<section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <link
+    rel="preload"
+    href="https://i.postimg.cc/kMS6nbXt/hero-01.webp"
+    as="image"
+  />
+  <link
+    rel="preload"
+    href="https://i.postimg.cc/02dzS1Sk/hero-02.webp"
+    as="image"
+  />
+  <link
+    rel="preload"
+    href="https://i.postimg.cc/SNpXjxJ1/hero-03.webp"
+    as="image"
+  />
+  <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div
+        class="hero"
+        style="
+          background-image: url('https://i.postimg.cc/kMS6nbXt/hero-01.webp');
+        "
+      >
+        <div class="overlay"></div>
+        <div class="hero-content">
+          <hr class="hr-line" />
+          <h1>
+            Servicio de Transporte <br />
+            de Carga Pesada
+          </h1>
+          <button class="btn-primary">
+            <a href="/servicios">Ver Servicios</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div
+        class="hero"
+        style="
+          background-image: url('https://i.postimg.cc/02dzS1Sk/hero-02.webp');
+        "
+      >
+        <div class="overlay"></div>
+        <div class="hero-content">
+          <hr class="hr-line" />
+          <h1>
+            Transporte rápido y seguro
+          </h1>
+          <button class="btn-primary">
+            <a href="/servicios">Ver Servicios</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div
+        class="hero"
+        style="
+          background-image: url('https://i.postimg.cc/SNpXjxJ1/hero-03.webp');
+        "
+      >
+        <div class="overlay"></div>
+        <div class="hero-content">
+          <hr class="hr-line" />
+          <h1>
+            El mejor proveedor de servicios logísticos
+          </h1>
+          <button class="btn-primary">
+            <a href="/servicios">Ver Servicios</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Indicadores (Puntos de navegación) -->
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#heroCarousel"
+      data-bs-slide-to="0"
+      class="active"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#heroCarousel"
+      data-bs-slide-to="1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#heroCarousel"
+      data-bs-slide-to="2"
+    ></button>
   </div>
 </section>

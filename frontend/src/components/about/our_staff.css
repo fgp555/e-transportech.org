@@ -1,0 +1,88 @@
+/* Contenedor principal */
+.our_staff {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Título y descripción */
+  .our_staff h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  .our_staff p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  /* Contenedor de tarjetas */
+  .our_staff_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  /* Tarjeta individual */
+  .our_staff_card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 320px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  /* Efecto hover en tarjeta */
+  .our_staff_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Imagen de la tarjeta */
+  .our_staff_card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Contenedor del cuerpo de la tarjeta */
+  .body {
+    padding: 1.5rem;
+  }
+  
+  /* Nombre */
+  .body_title {
+    font-size: 1.25rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Cargo */
+  .body_subtitle {
+    font-size: 1rem;
+    color: #e63946; /* Rojo vibrante */
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Descripción */
+  .body_text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .our_staff_cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

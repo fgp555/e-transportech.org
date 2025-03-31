@@ -4,6 +4,7 @@ import { BlogsComponent } from '../../components/blogs/blogs.component';
 import { MapComponent } from '../../components/map/map.component';
 import { VideoComponent } from '../../components/video/video.component';
 import { TestimoniesComponent } from '../../components/testimonies/testimonies.component';
+import { HeroComponent } from '../../components/hero/hero.component';
 
 @Component({
   imports: [
@@ -12,7 +13,7 @@ import { TestimoniesComponent } from '../../components/testimonies/testimonies.c
     BlogsComponent,
     MapComponent,
     TestimoniesComponent,
-    //
+    HeroComponent
   ],
   templateUrl: 'home.page.html',
 })
