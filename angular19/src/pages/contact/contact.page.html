@@ -46,7 +46,6 @@
           </div>
         </div>
       </div>
-
       <br />
 
       <div class="body">
@@ -59,7 +58,6 @@
             required
             minlength="10"
           ></textarea>
-
           <div *ngIf="mensajeRef.invalid && mensajeRef.touched" class="error">
             <small *ngIf="mensajeRef.errors?.['required']"
               >El mensaje es obligatorio.</small
@@ -72,8 +70,14 @@
       </div>
 
       <div class="foot">
-        <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+        <button type="submit" [disabled]="contactForm.invalid || enviando">
+          {{ enviando ? 'Enviando...' : 'Enviar' }}
+        </button>
       </div>
+
+      <!-- Mensajes de éxito o error -->
+      <div *ngIf="mensajeExito" class="success">{{ mensajeExito }}</div>
+      <div *ngIf="mensajeError" class="error">{{ mensajeError }}</div>
     </form>
   </aside>
 
@@ -82,25 +86,24 @@
     <table>
       <tr>
         <td>Telefono:</td>
-        <td>123-456-7890</td>
+        <td>+51 997 466 121</td>
       </tr>
       <tr>
         <td>Email:</td>
-        <td>2x1VW(a)example.com</td>
+        <td>v.malca&#64;e-transportech.org</td>
       </tr>
       <tr>
-        <td>Dirección:</td>
-        <td>123 Main Street, City, Country</td>
+        <td>Dirección Lima:</td>
+        <td>Marginal de la Selva N°369, Santiago de Surco</td>
       </tr>
       <tr>
-        <td>Horario:</td>
-        <td>Mon-Fri: 9am-5pm</td>
+        <td>Dirección Chancay:</td>
+        <td>Calle López de Zúñiga N° 18, 3er. piso</td>
       </tr>
       <tr>
         <td>Redes sociales:</td>
         <td class="social_media">
           <i class="fa-brands fa-facebook fa-lg"></i>
-          <i class="fa-brands fa-twitter fa-lg"></i>
           <i class="fa-brands fa-instagram fa-lg"></i>
           <i class="fa-brands fa-linkedin fa-lg"></i>
         </td>

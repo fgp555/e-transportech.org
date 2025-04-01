@@ -7,7 +7,8 @@ Content-Type: application/json
 {
   "name": "Frank GP",
   "email": "fgp555@gmail.com",
-  "subject": "Solicitar información",
-  "message": "Me gustaría obtener más información.",
+  "subject": "Gracias por contactarnos",
+  "message": "Me gustaría obtener más información. (request.http file)",
   "currentUrl": "http://example.com/contact"
 }
+

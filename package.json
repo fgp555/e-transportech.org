@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "dev": "npm run dev --prefix backend",
+    "start": "npm start --prefix angular19",
+    "build": "npm run build --prefix angular19",
+    "deploy": "git add . && git commit --amend --no-edit && git push --force"
+  }
+}

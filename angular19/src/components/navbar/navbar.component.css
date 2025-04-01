@@ -77,3 +77,8 @@ aside.right {
   }
 }
 /* === Mobile... === */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -11,7 +11,8 @@ const MAIL_HOST = process.env.MAIL_HOST;
 const MAIL_PASS = process.env.MAIL_PASS;
 const MAIL_PORT = process.env.MAIL_PORT;
 const MAIL_USER_FROM = process.env.MAIL_USER_FROM;
-const MAIL_USER_TO = process.env.MAIL_USER_TO;
+const MAIL_USER_TO_CC = process.env.MAIL_USER_TO_CC;
+
 console.log({ MAIL_USER_FROM });
 
 const transporter = nodemailer.createTransport({
@@ -22,32 +23,39 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get("/", (req, res) => {
-  res.send("/contact");
+  res.send("/contact Test Enpoint");
 });
 
 app.post("/submit", async (req, res) => {
-  const { name, email, message, currentUrl, subject } = req.body;
+  const { name, email, subject, message, currentUrl } = req.body;
+  const ccEmail = MAIL_USER_TO_CC; // Dirección de copia
 
-  const messageTemplate = `Gracias por escribirnos, te responderemos pronto. 
-\nNombre: ${name}
-Correo: ${email}
-Mensaje: ${message}
-Enviado desde: ${currentUrl}`;
+  const bodyMessage = `\n\nNombre: ${name}\nCorreo: ${email}\nMensaje: ${message}\nEnviado desde: ${currentUrl}`;
 
-  const mailOptions = {
-    from: `"${name}" <${process.env.MAIL_USER_FROM}>`,
-    to: email || MAIL_USER_TO,
-    cc: MAIL_USER_TO,
+  // 📩 Mensaje para el usuario
+  const userMessage = {
+    from: `"${name}" <${MAIL_USER_FROM}>`,
+    to: email,
     subject: subject || "Gracias por contactarnos",
-    text: messageTemplate,
+    text: `Gracias por escribirnos, te responderemos pronto.${bodyMessage}`,
+  };
+
+  // 📩 Mensaje para el destinatario en CC
+  const ccMessage = {
+    from: `"${name}" <${MAIL_USER_FROM}>`,
+    to: ccEmail,
+    subject: "Tienes un nuevo formulario",
+    text: `Un usuario ha enviado un nuevo formulario.${bodyMessage}`,
   };
 
   try {
-    await transporter.sendMail(mailOptions);
-    console.log("Correo enviado con éxito");
-    res.json({ success: true, message: "¡Formulario enviado con éxito!" });
+    await transporter.sendMail(userMessage); // 📤 Enviar al usuario
+    await transporter.sendMail(ccMessage); // 📤 Enviar al destinatario en CC
+    console.log("Correos enviados con éxito");
+
+    res.json({ success: true, message: "¡Formularios enviado con éxito!" });
   } catch (error) {
-    console.error("Error al enviar el correo:", error);
+    console.error("Error al enviar los correos:", error);
     res.status(500).json({ success: false, message: "Error interno del servidor" });
   }
 });
