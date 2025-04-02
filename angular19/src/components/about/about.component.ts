@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { MiniHeroComp } from '../mini-hero/mini-hero.comp';
 
 @Component({
+  imports: [MiniHeroComp],
   selector: 'about-component',
   templateUrl: './about.component.html',
   styleUrls: [

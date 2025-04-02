@@ -41,7 +41,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
-  background-color: cornflowerblue;
+  background-color: #7CC6F3;
   border: none;
   transition: background 0.3s ease-in-out;
   cursor: pointer;
@@ -69,9 +69,9 @@
   height: 0.2rem;
   background-color: #fff;
   margin: 1rem 0;
-  color: cornflowerblue;
+  color: #7CC6F3;
   opacity: 1;
-  background-color: cornflowerblue;
+  background-color: #7CC6F3;
 }
 
 a {

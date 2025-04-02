@@ -4,11 +4,18 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MapComponent } from '../../components/map/map.component';
 import { apiBaseURL, currentUrl } from '../../utils/constant';
+import { MiniHeroComp } from '../../components/mini-hero/mini-hero.comp';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule, MapComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    MapComponent,
+    MiniHeroComp,
+  ],
   templateUrl: './contact.page.html',
   styleUrls: ['./contact.page.css'],
 })
