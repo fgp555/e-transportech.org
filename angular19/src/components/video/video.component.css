@@ -19,6 +19,7 @@
   display: flex;
   flex-grow: 1; /* Permite que crezca */
   /* align-items: stretch; */
+  view-timeline: --numbers-view;
 }
 
 .col-md-6 {
@@ -35,10 +36,13 @@
   padding: 3.2rem !important;
   background-color: #718195;
   color: white;
+  
 }
 .card_title {
   font-size: 5rem;
   font-weight: bold;
+  animation: both scaleUp;
+  animation-timeline: --numbers-view;
 }
 .card_description {
   font-size: 1em;
@@ -58,4 +62,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    text-shadow: 0 0 5px #fff;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 0 0 20px #263868, 0 0 30px #263868;
+    
+  }
 }

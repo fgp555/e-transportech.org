@@ -14,3 +14,31 @@
 .text-muted {
   color: #888;
 }
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05); 
+}
+/*Animacion Title*/
+.animation-title{
+  view-timeline: --title-appear;
+}
+.title{
+  animation: both titleAppear;
+  animation-timeline: --title-appear;
+  animation-range: entry-crossing 20vh entry-crossing 40vh;
+}
+
+@keyframes titleAppear {
+  0%{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

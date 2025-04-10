@@ -7,12 +7,17 @@
   background-attachment: fixed; /* Efecto parallax */
   padding: 5rem 0;
   color: white; /* Asegura que el texto sea legible */
+ view-timeline: --title-appear; 
 }
+
 .title_testimonies {
   text-align: center;
   color: white;
   font-size: 3rem;
   margin-bottom: 4rem;
+  animation: both titleAppear;
+  animation-timeline: --title-appear;
+  animation-range: entry-crossing 20vh entry-crossing 40vh;
 }
 .testimonial-section h2 {
   color: white; /* Color del título */
@@ -37,4 +42,16 @@
 .lead {
   max-width: 50ch;
   margin: 2em auto;
+}
+
+/*Animacion Title*/
+@keyframes titleAppear {
+  0%{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

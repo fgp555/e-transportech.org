@@ -1,5 +1,12 @@
 .services_container {
   margin: 5rem auto;
+  view-timeline: --features-view;
+}
+
+.features {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;   
 }
 
 .card_container {
@@ -7,6 +14,9 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1rem;
+  
+  perspective: 1000px;
+  --num:4; 
 }
 
 .card_item {
@@ -24,6 +34,17 @@
   position: relative;
   overflow: hidden;
   text-align: center;
+  animation: both featuresCard;
+  animation-timeline:--features-view ;
+  animation-range: cover 20% cover 50%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.title{
+  animation: both titleAppear;
+  animation-timeline: --features-view;
+  animation-range: entry-crossing 20vh entry-crossing 40vh;
 }
 
 /* Fondo como pseudo-elemento para hacer zoom */
@@ -99,3 +120,30 @@ hr {
 .card_item:hover::after {
   transform: scale(1.1); /* Ampliación suave */
 }
+
+/* Animacion Title*/
+@keyframes titleAppear {
+  0%{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Animacion Cards*/
+@keyframes featuresCard {
+  0%{
+    transform: translate3d(-400px, 0, -200px) rotateY(45deg) scale(0.8);
+    filter: blur(4px); 
+    
+  }
+  100%{
+    transform: translate3d(0, 0, 0) rotateY(0deg) scale(1);
+    filter: blur(0); 
+    
+  }
+  
+}
+
