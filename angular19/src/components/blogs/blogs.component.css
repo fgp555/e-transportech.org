@@ -17,28 +17,30 @@
 .card-img-top {
   transition: transform 0.3s ease-in-out;
 }
-
-.card-img-top:hover {
-  transform: scale(1.05); 
+/*Animacion Scale Cards*/
+.card-scale {
+  transition: transform 0.3s ease;
+}
+.card-scale:hover {
+  transform: scale(1.03);
 }
 /*Animacion Title*/
-.animation-title{
+.animation-title {
   view-timeline: --title-appear;
 }
-.title{
+.title {
   animation: both titleAppear;
   animation-timeline: --title-appear;
   animation-range: entry-crossing 20vh entry-crossing 40vh;
 }
 
 @keyframes titleAppear {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(-50px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-

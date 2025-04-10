@@ -6,7 +6,7 @@
 .features {
   padding: 100px 0;
   position: relative;
-  overflow: hidden;   
+  overflow: hidden;
 }
 
 .card_container {
@@ -14,9 +14,8 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1rem;
-  
   perspective: 1000px;
-  --num:4; 
+  --num: 4;
 }
 
 .card_item {
@@ -35,13 +34,15 @@
   overflow: hidden;
   text-align: center;
   animation: both featuresCard;
-  animation-timeline:--features-view ;
+  animation-timeline: --features-view;
   animation-range: cover 20% cover 50%;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.title{
+.title {
   animation: both titleAppear;
   animation-timeline: --features-view;
   animation-range: entry-crossing 20vh entry-crossing 40vh;
@@ -123,27 +124,23 @@ hr {
 
 /* Animacion Title*/
 @keyframes titleAppear {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(50px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 /* Animacion Cards*/
 @keyframes featuresCard {
-  0%{
+  0% {
     transform: translate3d(-400px, 0, -200px) rotateY(45deg) scale(0.8);
-    filter: blur(4px); 
-    
+    filter: blur(4px);
   }
-  100%{
+  100% {
     transform: translate3d(0, 0, 0) rotateY(0deg) scale(1);
-    filter: blur(0); 
-    
+    filter: blur(0);
   }
-  
 }
-

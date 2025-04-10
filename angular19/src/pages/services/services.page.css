@@ -19,11 +19,8 @@
 /* ========== Tabs ========== */
 .services_container {
   margin-top: 6rem !important;
-  /* background-color: peru; */
- 
+  /* background-color: peru; */ 
 }
-
-
 .title_service {
   font-size: 1.5rem;
   color: black;
@@ -150,4 +147,3 @@
     grid-template-columns: 1fr;
   }
 }
-
