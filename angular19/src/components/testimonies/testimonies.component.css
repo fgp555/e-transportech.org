@@ -9,7 +9,9 @@
   color: white; /* Asegura que el texto sea legible */
  view-timeline: --title-appear; 
 }
-
+.carousel-inner{
+  view-timeline: --team-view;
+}
 .title_testimonies {
   text-align: center;
   color: white;
@@ -31,6 +33,9 @@
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #fff; /* Resalta la imagen */
+  animation: linear both rotateTestimonialImage;
+  animation-timeline: --team-view;
+  animation-range: contain;
 }
 
 .carousel-control-prev-icon,
@@ -53,5 +58,11 @@
   100%{
     opacity: 1;
     transform: translateX(0);
+  }
+}
+/*Animacion en imagen testimonios*/
+@keyframes rotateTestimonialImage {
+  to {
+    transform: rotateY(360deg);
   }
 }
