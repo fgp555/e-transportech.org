@@ -7,10 +7,7 @@
   width: 100%;
   aspect-ratio: 16/9.6;
 }
-.container-shadow{
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 
-}
 .card_container_parent {
   display: flex;
   flex-direction: row;
@@ -65,11 +62,31 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  view-timeline: --img-view;
+  animation: zoomBg both;
+  animation-timeline: --img-view;
+  animation-range: entry 0% cover 40%;
+  aspect-ratio: 16/9;
+  background-color: #718195;
 }
+
+.container-scale-img{
+  view-timeline: --img-view;
+}
+.scale-img{
+  animation: both scaleImg ;
+  animation-timeline: --img-view;
+  animation-range: entry 0% cover 80%;
+  display: block;
+  will-change: transform, opacity;
+}
+
+
+/*Animación en numeros*/
 @keyframes scaleUp {
   0% {
     transform: scale(0.5);
-    opacity: 0;
+    opacity:0;
     text-shadow: 0 0 5px #fff;
   }
   100% {
@@ -77,5 +94,17 @@
     opacity: 1;
     text-shadow: 0 0 20px #263868, 0 0 30px #263868;
     
+  }
+}
+
+/*Animacion imagen*/
+@keyframes zoomBg {
+  0% {
+    background-size: 40%;
+    
+  }
+  100% {
+    background-size: 100%;
+   
   }
 }
