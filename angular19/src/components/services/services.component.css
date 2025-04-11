@@ -24,7 +24,6 @@
   flex: 1 1 16rem;
   padding: 1rem;
   max-width: 20rem;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +37,6 @@
   animation-range: cover 20% cover 50%;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 

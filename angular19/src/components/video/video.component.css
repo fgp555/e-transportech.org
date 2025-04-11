@@ -38,12 +38,14 @@
   color: white;
   
 }
+
 .card_title {
   font-size: 5rem;
   font-weight: bold;
   animation: both scaleUp;
   animation-timeline: --numbers-view;
 }
+
 .card_description {
   font-size: 1em;
   font-weight: 200;
@@ -73,6 +75,7 @@
 .container-scale-img{
   view-timeline: --img-view;
 }
+
 .scale-img{
   animation: both scaleImg ;
   animation-timeline: --img-view;
@@ -80,7 +83,6 @@
   display: block;
   will-change: transform, opacity;
 }
-
 
 /*Animación en numeros*/
 @keyframes scaleUp {
