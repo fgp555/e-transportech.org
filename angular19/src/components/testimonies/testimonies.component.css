@@ -33,10 +33,9 @@
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #fff; /* Resalta la imagen */
-  animation: linear both rotateTestimonialImage;
+  animation: zoomTestimonialImage 2s linear both;
   animation-timeline: --team-view;
-  animation-range: contain;
-}
+  animation-range: entry 0% entry 100%; }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -61,8 +60,11 @@
   }
 }
 /*Animacion en imagen testimonios*/
-@keyframes rotateTestimonialImage {
-  to {
-    transform: rotateY(360deg);
+@keyframes zoomTestimonialImage {
+  0% {
+    transform: scale(0.5) ; 
+  }
+  100% {
+    transform: scale(1) ; 
   }
 }

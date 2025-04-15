@@ -110,3 +110,9 @@
    
   }
 }
+/*Responsive - Evita que los números se apilen verticalmente */
+@media (max-width: 40rem) {
+  .card_title {
+    font-size: 4rem;   
+  }
+}
