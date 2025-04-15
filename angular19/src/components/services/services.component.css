@@ -120,7 +120,7 @@ hr {
   transform: scale(1.1); /* Ampliación suave */
 }
 
-/* Animacion Title*/
+/* Animación Title*/
 @keyframes titleAppear {
   0% {
     opacity: 0;
@@ -131,7 +131,7 @@ hr {
     transform: translateY(0);
   }
 }
-/* Animacion Cards*/
+/* Animación Cards*/
 @keyframes featuresCard {
   0% {
     transform: translate3d(-400px, 0, -200px) rotateY(45deg) scale(0.8);
@@ -142,3 +142,40 @@ hr {
     filter: blur(0);
   }
 }
+
+/*Responsive Animaciones Cards y title*/
+@media (max-width: 768px) {
+  @keyframes featuresCardMobile {
+    0% {
+      transform: translate3d(0, 100px, 0) scale(0.8);  
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+  .card_item {
+    animation-range: cover 5% cover 30%; 
+  }
+  @keyframes titleAppearMobile {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .features-card {
+    animation: featuresCardMobile 0.10s ease-out forwards;
+  }
+  .features {
+    padding: 20px;
+  }
+  
+  .title {
+    animation: titleAppearMobile 0.5s ease-out forwards;
+  }
+  }
+ 
+
